@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: underline;
+            color: #0000EE; /* Μπλε χρώμα κειμένου */
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            width: 300px;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #fff;
+            text-align: left;
+            border-radius: 5px;
+            padding: 10px;
+            position: absolute;
+            z-index: 10;
+            bottom: 125%; /* Τοποθετεί το tooltip πάνω από τη λέξη */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <p style="text-align: justify;">
+        Η <span class="tooltip">πολιτική ομαλότητα
+            <span class="tooltip-text">
+                Αφού ορκίστηκε στο πιο φιλελεύθερο Σύνταγμα που συντάχθηκε, προσπάθησε επιτυχώς να συνδιαλλάξει τα αντίμαχομένα μέρη όπως είχαν διαμορφωθεί μετά την επανάσταση του Θερίσου παρέχοντας γενική αμνηστία.
+            </span>
+        </span> 
+    </p>
+</body>
+</html>
